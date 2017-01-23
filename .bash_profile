@@ -3,11 +3,11 @@ bold=$(tput bold)
 underline=$(tput sgr 0 1)
 reset=$(tput sgr0)
 
-purple=$(tput setaf 171)
+purple=$(tput setaf 13)
 red=$(tput setaf 9)
-green=$(tput setaf 76)
-tan=$(tput setaf 3)
-blue=$(tput setaf 38)
+green=$(tput setaf 10)
+tan=$(tput setaf 214)
+blue=$(tput setaf 20)
 
 #
 # ---- Headers and  Logging --------
