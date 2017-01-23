@@ -83,7 +83,7 @@ alias lsal="ls -FGlAhp" #lists as above + permissions
 alias cp="cp -iv" 	#copys but warns if there will be an override
 alias mv="mv -iv"	#moves but warns if there will be an override
 alias mkdir="mkdir -p"     #creates intermediate dirs if required and is verbose
-touch () {
+t () {
     touch $1        ;
     chmod u+x $1    ;
 }
