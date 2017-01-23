@@ -21,8 +21,8 @@ export PS1="${line}_____________________________________________________________
 alias b="code ~/.bash_profile"					# opens bash profile
 alias p="cd /Users/Richard/GoogleDrive/Programs"		# navigates to programs folder
 #-----Utilities-----
-sb () {                                                         #refresh and backup bash_profile
-    (cd                                             ;                                                                
+sb () {                                                         # refresh and backup bash_profile
+    (cd                                             ;           # open parenthesis creates subshell to execute from home dir                                                     
     git commit -q -am "$1"	                        ;           # commits all to git - requires message
     git push  -q origin master	                    ;           # pushes all to remote
     source ~/.bash_profile                          ;           # refresh bash_profile
