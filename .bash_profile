@@ -12,7 +12,7 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 bold=$(tput bold)
 line=$(tput setab 0)
 reset=$(tput sgr0)
-export PS1="${line}_____________________________________________________________\t_\d${reset}\n${bold}(\u) @ \w ${reset}"
+export PS1="${line}_____________________________________________________________\t_\d${reset}\n${bold}(\u) @ \W ${reset}"
 
 
 #----TEMP----
