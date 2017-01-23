@@ -19,7 +19,7 @@ alias b="code ~/.bash_profile"					# opens bash profile
 alias p="cd /Users/Richard/GoogleDrive/Programs"		# navigates to programs folder
 #-----Utilities-----
 sb () {     #refresh and backup bash_profile   
-    git commit -q -am $1	                            ;       # commits all to git
+    git commit -q -am "$1"	                            ;       # commits all to git
     git push origin master	                        ;       # pushes all to remote
     source ~/.bash_profile                          ;       # refresh bash_profile
     cp -iv ~/.bash_profile ~/bback/bash_profile.backup.$(date +%Y-%m-%d_%H:%M:%S)   ;   #backup bash profile
