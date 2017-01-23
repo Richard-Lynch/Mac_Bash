@@ -14,6 +14,8 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 
 
 
+
+
 #----TEMP----
 
 #-----SHORTCUTS----
