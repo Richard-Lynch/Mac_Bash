@@ -1,46 +1,3 @@
-#-----Color---------
-bold=$(tput bold)
-underline=$(tput sgr 0 1)
-reset=$(tput sgr0)
-
-purple=$(tput setaf 13)
-red=$(tput setaf 9)
-green=$(tput setaf 10)
-tan=$(tput setaf 214)
-blue=$(tput setaf 20)
-
-line=$(tput setab 0)
-
-#
-# ---- Headers and  Logging --------
-#
-
-e_header() { printf "\n${bold}${purple}==========  %s  ==========${reset}\n" "$@" 
-}
-e_arrow() { printf "➜ $@\n"
-}
-e_success() { printf "${green}✔ %s${reset}\n" "$@"
-}
-e_error() { printf "${red}✖ %s${reset}\n" "$@"
-}
-e_warning() { printf "${tan}➜ %s${reset}\n" "$@"
-}
-e_underline() { printf "${underline}${bold}%s${reset}\n" "$@"
-}
-e_bold() { printf "${bold}%s${reset}\n" "$@"
-}
-e_note() { printf "${underline}${bold}${blue}Note:${reset}  ${blue}%s${reset}\n" "$@"
-}
-
-# EXAMPLES
-# e_header "I am a sample script"
-# e_success "I am a success message"
-# e_error "I am an error message"
-# e_warning "I am a warning message"
-# e_underline "I am underlined text"
-# e_bold "I am bold text"
-# e_note "I am a note"
-
 #-----PYTHON----
 # Setting PATH for Python 3.5
 # The orginal version is saved in .bash_profile.pysave
@@ -51,13 +8,14 @@ export PATH
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
-#----VS CODE----
-# code .	//opens code in the current dir
-# code file.txt //opens the file with code 
+#----Look of Terminal----
+bold=$(tput bold)
+line=$(tput setab 0)
+reset=$(tput sgr0)
+export PS1="${line}________________________________________________________________________________${reset}\n${bold}(\u) @ \w \n${reset}"
 
 
 #----TEMP----
-export PS1="${line}________________________________________________________________________________${reset}\n${bold}(\u) @ \w \n${reset}"
 
 #-----SHORTCUTS----
 alias b="code ~/.bash_profile"					# opens bash profile
@@ -91,6 +49,12 @@ create () {
 #----GIT----
 alias gcommit="git commit -am"		# commits all to git
 alias gpush="git push origin master"	# pushes all to remote
+gadd () {
+    create $1                       ;
+    git add $1                      ;
+    git commit -am "Created $1"     ;
+    git push origin master          ;
+}
 # --New Git Repo--
 # Creates;  new directory, empty readme, new git repo, remote github repos
 # Actions;  adds and commits all files to repo, adds remote origin, verifys, pushs
