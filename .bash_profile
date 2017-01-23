@@ -13,7 +13,8 @@ bold=$(tput bold)
 line=$(tput setab 0)
 reset=$(tput sgr0)
 #export PS1="${line}_____________________________________________________________\t_\d${reset}\n${bold}(\u) @ \w ${reset}"
-export PS1="${line}_____________________________________________________________\t_\d${reset}\n${bold}\W ${reset}"
+# export PS1="${line}_____________________________________________________________\t_\d${reset}\n${bold}\W ${reset}"
+export PS1="${reset}\n${bold}\W ${reset}" # super small
 
 
 
