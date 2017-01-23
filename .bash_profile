@@ -14,7 +14,7 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 
 
 #----TEMP----
-export PS1="________________________________________________________________________________\n(\u) @ \w \n => "
+export PS1="________________________________________________________________________________\n(\u) @ \w \n "
 
 #-----SHORTCUTS----
 alias b="code ~/.bash_profile"					# opens bash profile
