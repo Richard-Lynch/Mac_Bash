@@ -1,3 +1,44 @@
+#-----Color---------
+bold=$(tput bold)
+underline=$(tput sgr 0 1)
+reset=$(tput sgr0)
+
+purple=$(tput setaf 171)
+red=$(tput setaf 1)
+green=$(tput setaf 76)
+tan=$(tput setaf 3)
+blue=$(tput setaf 38)
+
+#
+# ---- Headers and  Logging --------
+#
+
+e_header() { printf "\n${bold}${purple}==========  %s  ==========${reset}\n" "$@" 
+}
+e_arrow() { printf "➜ $@\n"
+}
+e_success() { printf "${green}✔ %s${reset}\n" "$@"
+}
+e_error() { printf "${red}✖ %s${reset}\n" "$@"
+}
+e_warning() { printf "${tan}➜ %s${reset}\n" "$@"
+}
+e_underline() { printf "${underline}${bold}%s${reset}\n" "$@"
+}
+e_bold() { printf "${bold}%s${reset}\n" "$@"
+}
+e_note() { printf "${underline}${bold}${blue}Note:${reset}  ${blue}%s${reset}\n" "$@"
+}
+
+# EXAMPLES
+# e_header "I am a sample script"
+# e_success "I am a success message"
+# e_error "I am an error message"
+# e_warning "I am a warning message"
+# e_underline "I am underlined text"
+# e_bold "I am bold text"
+# e_note "I am a note"
+
 #-----PYTHON----
 # Setting PATH for Python 3.5
 # The orginal version is saved in .bash_profile.pysave
@@ -14,7 +55,7 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 
 
 #----TEMP----
-export PS1="________________________________________________________________________________\n(\u) @ \w \n"
+export PS1="${purple}________________________________________________________________________________\n(\u) @ \w \n${reset}"
 
 #-----SHORTCUTS----
 alias b="code ~/.bash_profile"					# opens bash profile
