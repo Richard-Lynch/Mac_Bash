@@ -12,6 +12,8 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 # code .	//opens code in the current dir
 # code file.txt //opens the file with code 
 
+
+
 #----TEMP----
 
 #-----SHORTCUTS----
