@@ -63,7 +63,7 @@ gnew () {
     touch readme.txt                ;
     git init                        ;
     git add .                       ;
-    git commit -m "First commit"    ;
+    git commit -am "First commit"   ;
     curl -u 'Richard-Lynch' https://api.github.com/user/repos -d "{\"name\":\"$1\"}"   ;
     git remote add origin https://github.com/Richard-Lynch/$1.git                      ;
     git remote -v                   ;
