@@ -12,7 +12,7 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 bold=$(tput bold)
 line=$(tput setab 0)
 reset=$(tput sgr0)
-export PS1="${line}________________________________________________________________________________${reset}\n${bold}(\u) @ \w \n${reset}"
+export PS1="${line}________________________________________________________________________________${reset}\n${bold}\t (\u) @ \w \n${reset}"
 
 
 #----TEMP----
@@ -25,9 +25,9 @@ sb () {                                                         # refresh and ba
     (cd                                             ;           # open parenthesis creates subshell to execute from home dir                                                     
     git commit -q -am "$1"	                        ;           # commits all to git - requires message
     git push  -q origin master	                    ;           # pushes all to remote
-    source ~/.bash_profile                          ;           # refresh bash_profile
     cp -iv ~/.bash_profile ~/bback/bash_profile.backup.$(date +%Y-%m-%d_%H:%M:%S)   ;   # backup bash profile
-    )
+    )   #outside of the subshell
+    source ~/.bash_profile                          ;           # refresh bash_profile
     }
 
 #-----SHELL PRACTICE----
