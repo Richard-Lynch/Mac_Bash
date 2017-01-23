@@ -37,9 +37,9 @@ alias lsa="ls -FGA"	#lists all including hidden colors etc
 alias lsal="ls -FGlAhp" #lists as above + permissions
 alias cp="cp -iv" 	#copys but warns if there will be an override
 alias mv="mv -iv"	#moves but warns if there will be an override
+alias mkdir="mkdir -pv"     #creates intermediate dirs if required and is verbose
 
 #----GIT----
-# alias gnew="/Users/Richard/.scri/newgit.sh"	# creates a new remote repository and adds all files
 alias gcommit="git commit -am"		# commits all to git
 alias gpush="git push origin master"	# pushes all to remote
 # --New Git Repo--
@@ -53,7 +53,6 @@ gnew () {
     git commit -m "First commit"    ;
     curl -u 'Richard-Lynch' https://api.github.com/user/repos -d "{\"name\":\"$1\"}"   ;
     git remote add origin https://github.com/Richard-Lynch/$1.git                      ;
-    # git remote add origin "$2"      ;
     git remote -v                   ;
     git push -u origin master       ;
     }
