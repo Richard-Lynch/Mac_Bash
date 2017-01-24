@@ -1,18 +1,18 @@
-#-----PYTHON----
+#---------------------PYTHON---------------------
 # Setting PATH for Python 3.5
 # The orginal version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
 export PATH
 
-#-----HIDDEN FILES----
+#---------------------HIDDEN FILES---------------------
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
-#----Look of Terminal----
+#---------------------Style of Terminal---------------------
 bold=$(tput bold)
 line=$(tput setab 0)
 reset=$(tput sgr0)
-#export PS1="${line}_____________________________________________________________\t_\d${reset}\n${bold}(\u) @ \w ${reset}"
+# export PS1="${line}_____________________________________________________________\t_\d${reset}\n${bold}(\u) @ \w ${reset}"
 # export PS1="${line}_____________________________________________________________\t_\d${reset}\n${bold}\W ${reset}"
 export PS1="${bold}\u @ \w ${reset}" # super small
 # export PS1="${bold}\w ${reset}" # super small
@@ -22,12 +22,13 @@ export PS1="${bold}\u @ \w ${reset}" # super small
 #     chmod x+u "$1".out      ;
 # }
 
-#----TEMP----
+#---------------------TEMP---------------------
 
-#-----SHORTCUTS----
-alias b="code ~/.bash_profile"					# opens bash profile
+#---------------------SHORTCUTS---------------------
+alias b="code ~/.bash_profile"					        # opens bash profile
 alias p="cd /Users/Richard/GoogleDrive/Programs"		# navigates to programs folder
-#-----Utilities-----
+#---------------------Utilities---------------------
+# Refresh Bash profile, commit and push to github and backup
 sb () {                                                         # refresh and backup bash_profile
     (cd                                             ;           # open parenthesis creates subshell to execute from home dir                                                     
     git commit -q -am "$1"	                        ;           # commits all to git - requires message
@@ -37,26 +38,27 @@ sb () {                                                         # refresh and ba
     source ~/.bash_profile                          ;           # refresh bash_profile
     }
 
-#-----SHELL PRACTICE----
-alias ns="code /Users/Richard/GoogleDrive/Documents/College/Eng_2016-2017/shell/script.sh"
-alias S="cd /Users/Richard/GoogleDrive/Documents/College/Eng_2016-2017/shell"
-alias s=" /Users/Richard/GoogleDrive/Documents/College/Eng_2016-2017/shell/script.sh"
+create () {
+    touch $1        ;
+    chmod u+x $1    ;
+}
+
+#---------------------SHELL PRACTICE---------------------
+# alias ns="code /Users/Richard/GoogleDrive/Documents/College/Eng_2016-2017/shell/script.sh"
+# alias S="cd /Users/Richard/GoogleDrive/Documents/College/Eng_2016-2017/shell"
+# alias s="/Users/Richard/GoogleDrive/Documents/College/Eng_2016-2017/shell/script.sh"
 
 
-#----PREFERED COMMANDS----
+#---------------------PREFERED COMMANDS---------------------
 alias ls="ls -FG"  #lists file with color and annotation
 alias lsa="ls -FGA"	#lists all including hidden colors etc
 alias lsal="ls -FGlAhp" #lists as above + permissions
 alias cp="cp -irv" 	#copys but warns if there will be an override
 alias mv="mv -irv"	#moves but warns if there will be an override
 alias mkdir="mkdir -p"     #creates intermediate dirs if required and is verbose
-#alias op="open "
-create () {
-    touch $1        ;
-    chmod u+x $1    ;
-}
 
-#----GIT----
+
+#---------------------GIT---------------------
 alias gcommit="git commit -am"		# commits all to git
 alias gpush="git push origin master"	# pushes all to remote
 gadd () {
@@ -66,16 +68,17 @@ gadd () {
     git push origin master          ;
 }
 # --New Git Repo--
-# Creates;  new directory, empty readme, new git repo, remote github repos
-# Actions;  adds and commits all files to repo, adds remote origin, verifys, pushs
 gnew () {
+    # -new directory, empty readme, .vscode template-
     mkdir -p "$1" && cd "$1"        ;
     touch readme.txt                ;
     # mkdir -p .vscode && cd .vscode  ;
     cp -r ~/GoogleDrive/Programs/VS_Templates/"$2" .vscode ;
+    # -new git repo, adds and commits all files to repo-
     git init                        ;
     git add .                       ;
     git commit -am "First commit"   ;
+    # -remote github repos, adds remote origin, verifys, pushs-
     curl -u 'Richard-Lynch' https://api.github.com/user/repos -d "{\"name\":\"$1\"}"   ;
     git remote add origin https://github.com/Richard-Lynch/$1.git                      ;
     git remote -v                   ;
