@@ -17,7 +17,10 @@ reset=$(tput sgr0)
 export PS1="${bold}\u @ \w ${reset}" # super small
 # export PS1="${bold}\w ${reset}" # super small
 
-
+# compile () {
+#     gcc -w "$1"   ;
+#     chmod x+u "$1".out      ;
+# }
 
 #----TEMP----
 
