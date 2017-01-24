@@ -47,8 +47,8 @@ alias s=" /Users/Richard/GoogleDrive/Documents/College/Eng_2016-2017/shell/scrip
 alias ls="ls -FG"  #lists file with color and annotation
 alias lsa="ls -FGA"	#lists all including hidden colors etc
 alias lsal="ls -FGlAhp" #lists as above + permissions
-alias cp="cp -iv" 	#copys but warns if there will be an override
-alias mv="mv -iv"	#moves but warns if there will be an override
+alias cp="cp -irv" 	#copys but warns if there will be an override
+alias mv="mv -irv"	#moves but warns if there will be an override
 alias mkdir="mkdir -p"     #creates intermediate dirs if required and is verbose
 #alias op="open "
 create () {
