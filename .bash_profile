@@ -56,7 +56,7 @@ alias lsal="ls -FGlAhp" #lists as above + permissions
 alias cp="cp -irv" 	#copys but warns if there will be an override
 alias mv="mv -irv"	#moves but warns if there will be an override
 alias mkdir="mkdir -p"     #creates intermediate dirs if required and is verbose
-
+alias cl="clear && cd"   #clear and return home
 
 #---------------------GIT---------------------
 alias gcommit="git commit -am"		# commits all to git
