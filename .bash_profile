@@ -72,7 +72,7 @@ gnew () {
     mkdir -p "$1" && cd "$1"        ;
     touch readme.txt                ;
     # mkdir -p .vscode && cd .vscode  ;
-    cp -r ~/GoogleDrive/Programs/VS_Templates/c_template .vscode ;
+    cp -r ~/GoogleDrive/Programs/VS_Templates/"$2" .vscode ;
     git init                        ;
     git add .                       ;
     git commit -am "First commit"   ;
