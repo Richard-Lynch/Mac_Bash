@@ -68,6 +68,7 @@ gcp () {
     cp "$1" "$2"                        ;
     (
     cd $2                                 ;
+    sudo rm -2 .git                 ;
     # -new git repo, adds and commits all files to repo-
     git init                        ;
     git add .                       ;
