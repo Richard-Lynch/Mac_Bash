@@ -65,11 +65,19 @@ alias cl="clear && cd"   #clear and return home
 alias gcommit="git commit -am"		# commits all to git
 alias gpush="git push origin master"	# pushes all to remote
 gcp () { 
-    cp "$1" "$2$3"                        ;
+    cp "$1" "$2"                        ;
     (
     cd $2                                 ;
-    git add "$2$3"                        ;
-    git commit -am "Copied $2$3 from $1"  ;
+    # -new git repo, adds and commits all files to repo-
+    git init                        ;
+    git add .                       ;
+    git commit -am "First commit from copy of $1 to $2"   ;
+    # -remote github repos, adds remote origin, verifys, pushs-
+    curl -u 'Richard-Lynch' https://api.github.com/user/repos -d "{\"name\":\"$2\"}"   ;
+    git remote add origin https://github.com/Richard-Lynch/$1.git                      ;
+    git remote -v                   ;
+    git push -u origin master       ;              ;
+    git commit -am "Copied $2 from $1"  ;
     git push origin master          ;
     )
 }
