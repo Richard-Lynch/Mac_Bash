@@ -27,7 +27,9 @@ export PS1="${bold}\u @ \w ${reset}" # super small
 #---------------------SHORTCUTS---------------------
 alias b="code ~/.bash_profile"					        # opens bash profile
 alias p="cd /Users/Richard/GoogleDrive/Programs"		# navigates to programs folder
-alias ht="sudo htop"
+alias ht="sudo htop"                                    # opens a better top
+# curl -u USERNAME -O https://WEBADDRESS/FILELOCATION/FILENAME.c
+# ps -A lists all processes
 #---------------------Utilities---------------------
 # Refresh Bash profile, commit and push to github and backup
 sb () {                                                         # refresh and backup bash_profile
@@ -62,9 +64,16 @@ alias cl="clear && cd"   #clear and return home
 #---------------------GIT---------------------
 alias gcommit="git commit -am"		# commits all to git
 alias gpush="git push origin master"	# pushes all to remote
+gcp () { 
+    cp "$1" "$2"                        ;
+    git add "$2"                        ;
+    git commit -am "Copied $2 from $1"  ;
+    git push origin master          ;
+}
+
 gadd () {
-    create $1                       ;
-    git add $1                      ;
+    create "$1"                       ;
+    git add "$1"                      ;
     git commit -am "Created $1"     ;
     git push origin master          ;
 }
@@ -74,7 +83,7 @@ gnew () {
     mkdir -p "$1" && cd "$1"        ;
     touch readme.txt                ;
     # mkdir -p .vscode && cd .vscode  ;
-    cp -r ~/GoogleDrive/Programs/VS_Templates/"$2" .vscode ;
+    cp -r ~/GoogleDrive/Programs/VS_Templates/"$2" ./vscode ;
     # -new git repo, adds and commits all files to repo-
     git init                        ;
     git add .                       ;
