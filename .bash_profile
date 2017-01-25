@@ -67,6 +67,7 @@ alias gpush="git push origin master"	# pushes all to remote
 gcp () { 
     cp "$1" "$2$3"                        ;
     (
+    cd $2                                 ;
     git add "$2$3"                        ;
     git commit -am "Copied $2$3 from $1"  ;
     git push origin master          ;
