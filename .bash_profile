@@ -65,10 +65,12 @@ alias cl="clear && cd"   #clear and return home
 alias gcommit="git commit -am"		# commits all to git
 alias gpush="git push origin master"	# pushes all to remote
 gcp () { 
-    cp "$1" "$2"                        ;
-    git add "$2"                        ;
-    git commit -am "Copied $2 from $1"  ;
+    cp "$1" "$2$3"                        ;
+    (
+    git add "$2$3"                        ;
+    git commit -am "Copied $2$3 from $1"  ;
     git push origin master          ;
+    )
 }
 
 gadd () {
