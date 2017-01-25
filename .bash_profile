@@ -77,7 +77,7 @@ gcp () {
     curl -u 'Richard-Lynch' https://api.github.com/user/repos -d "{\"name\":\"$2\"}"   ;
     git remote add origin https://github.com/Richard-Lynch/$1.git                      ;
     git remote -v                   ;
-    git push -u origin master       ;              ;
+    git push -u origin master       ;              
     git commit -am "Copied $2 from $1"  ;
     git push origin master          ;
     )
