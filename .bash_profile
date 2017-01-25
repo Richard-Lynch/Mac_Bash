@@ -68,14 +68,14 @@ gcp () {
     cp "$1" "$2"                        ;
     (
     cd $2                                 ;
-    sudo rm -2 .git                 ;
+    sudo rm -r .git                 ;
     # -new git repo, adds and commits all files to repo-
     git init                        ;
     git add .                       ;
     git commit -am "First commit from copy of $1 to $2"   ;
     # -remote github repos, adds remote origin, verifys, pushs-
     curl -u 'Richard-Lynch' https://api.github.com/user/repos -d "{\"name\":\"$2\"}"   ;
-    git remote add origin https://github.com/Richard-Lynch/$1.git                      ;
+    git remote add origin https://github.com/Richard-Lynch/$2.git                      ;
     git remote -v                   ;
     git push -u origin master       ;              
     git commit -am "Copied $2 from $1"  ;
