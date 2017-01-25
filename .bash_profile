@@ -27,6 +27,7 @@ export PS1="${bold}\u @ \w ${reset}" # super small
 #---------------------SHORTCUTS---------------------
 alias b="code ~/.bash_profile"					        # opens bash profile
 alias p="cd /Users/Richard/GoogleDrive/Programs"		# navigates to programs folder
+alias ht="sudo htop"
 #---------------------Utilities---------------------
 # Refresh Bash profile, commit and push to github and backup
 sb () {                                                         # refresh and backup bash_profile
