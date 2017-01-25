@@ -64,9 +64,9 @@ alias cl="clear && cd"   #clear and return home
 #---------------------GIT---------------------
 alias gcommit="git commit -am"		# commits all to git
 alias gpush="git push origin master"	# pushes all to remote
-gcp () { 
+
+gcp () {                                # copies a folder to a new folder, and creates a new git/github repo for it, and pushes everything
     cp "$1" "$2"                        ;
-    (
     cd $2                                 ;
     sudo rm -rv .git                 ;
     # -new git repo, adds and commits all files to repo-
@@ -80,7 +80,6 @@ gcp () {
     git push -u origin master       ;              
     git commit -am "Copied $2 from $1"  ;
     git push origin master          ;
-    )
 }
 
 gadd () {
