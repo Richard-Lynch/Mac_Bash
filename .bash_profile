@@ -25,7 +25,7 @@ export PS1="${bold}\u @ \w ${reset}" # super small
 #---------------------TEMP---------------------
 
 #---------------------SHORTCUTS---------------------
-alias b="(cd && code ~/.bash_profile)"					        # opens bash profile
+alias b="(cd && code .bash_profile)"					        # opens bash profile
 alias p="cd /Users/Richard/GoogleDrive/Programs"		# navigates to programs folder
 alias ht="sudo htop"                                    # opens a better top
 # curl -u USERNAME -O https://WEBADDRESS/FILELOCATION/FILENAME.c
