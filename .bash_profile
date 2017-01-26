@@ -25,7 +25,7 @@ export PS1="${bold}\u @ \w ${reset}" # super small
 #---------------------TEMP---------------------
 
 #---------------------SHORTCUTS---------------------
-alias b="code ~/.bash_profile"					        # opens bash profile
+alias b="(cd && code ~/.bash_profile)"					        # opens bash profile
 alias p="cd /Users/Richard/GoogleDrive/Programs"		# navigates to programs folder
 alias ht="sudo htop"                                    # opens a better top
 # curl -u USERNAME -O https://WEBADDRESS/FILELOCATION/FILENAME.c
@@ -63,7 +63,7 @@ alias cl="clear && cd"   #clear and return home
 
 #---------------------GIT---------------------
 alias gcommit="git commit -am"		# commits all to git
-alias gpush="git push origin master"	# pushes all to remote
+alias gpush="git push origin"	# pushes all to remote
 
 gcp () {                                # copies a folder to a new folder, and creates a new git/github repo for it, and pushes everything
     cp "$1" "$2"                        ;
