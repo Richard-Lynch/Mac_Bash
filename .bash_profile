@@ -53,6 +53,7 @@ create () {
     touch $1        ;
     chmod u+x $1    ;
 }
+alias sbu="source ~/.bash_profile"
 
 #---------------------SHELL PRACTICE---------------------
 # alias ns="code /Users/Richard/GoogleDrive/Documents/College/Eng_2016-2017/shell/script.sh"
