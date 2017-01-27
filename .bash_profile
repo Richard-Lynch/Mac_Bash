@@ -25,11 +25,19 @@ export PS1="${bold}\u @ \w ${reset}" # super small
 #---------------------TEMP---------------------
 
 #---------------------SHORTCUTS---------------------
-alias b="(cd && code .bash_profile)"					        # opens bash profile
+alias b="(cd && code .bash_profile)"					# opens bash profile
 alias p="cd /Users/Richard/GoogleDrive/Programs"		# navigates to programs folder
 alias ht="sudo htop"                                    # opens a better top
 # curl -u USERNAME -O https://WEBADDRESS/FILELOCATION/FILENAME.c
 # ps -A lists all processes
+
+alias ..="cd ../"
+alias ...="cd ../../"
+alias .3="cd ../../../"
+alias .4="cd ../../../../"
+alias .5="cd ../../../../../"
+alias .6="cd ../../../../../../"
+
 #---------------------Utilities---------------------
 # Refresh Bash profile, commit and push to github and backup
 sb () {                                                         # refresh and backup bash_profile
