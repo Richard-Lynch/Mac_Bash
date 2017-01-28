@@ -36,7 +36,19 @@ alias ht="sudo htop"                                    # opens a better top
 # pushd     #pushes the current dir onto the stack
 # popd      #pops the top dir from the stack
 # touch ~1/test.txt #creares the file test.txt in the location stored in the first index of the array ( could be second third fourth index )
-alias dirs="dirs -v"
+# !!        #is the last command you executed
+# sudo !!   #so use this if you forget sudo use
+alias dirs="dirs -v"    #lists the stack vertically with index's
+alias h="history"  #lists history of commands
+# !:21           #reuses command 21 from the history list above ( or the 11st argument from the last command if put in the posotion of an arguemnt )
+# !111:1        #reuses arguemnt 1 from command 111 from above list
+# ALT + [argument number] # selects arugment(including command ( index 0 )) from last command -> CTRL + ALT + Y (for yank) will paste to screen 
+
+# vim   gotta use
+# vimtutor : learn to use vim
+
+# tmux ( installed with brew ) -> allows for multiple bash sessions in one screen with multiple threads, and allows ssh'ing between machiens with shared stuff
+# tmux attach -t SESSION_NAME
 
 
 alias ..="cd ../"
