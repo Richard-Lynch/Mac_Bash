@@ -31,6 +31,14 @@ alias ht="sudo htop"                                    # opens a better top
 # curl -u USERNAME -O https://WEBADDRESS/FILELOCATION/FILENAME.c
 # ps -A lists all processes
 
+# dirs      #lists the current directories on the dir stack 
+# dirs -v   #lists the stack vertically with index's
+# pushd     #pushes the current dir onto the stack
+# popd      #pops the top dir from the stack
+# touch ~1/test.txt #creares the file test.txt in the location stored in the first index of the array ( could be second third fourth index )
+alias dirs="dirs -v"
+
+
 alias ..="cd ../"
 alias ...="cd ../../"
 alias .3="cd ../../../"
