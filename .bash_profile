@@ -50,13 +50,10 @@ alias h="history"  #lists history of commands
 # tmux ( installed with brew ) -> allows for multiple bash sessions in one screen with multiple threads, and allows ssh'ing between machiens with shared stuff
 # tmux attach -t SESSION_NAME
 
-ncd () {
+lcd () {
     cd "$1"         ;
     ls              ;
 }
-
-# aias cd="newcd"
-
 
 alias ..="cd ../"
 alias ...="cd ../../"
