@@ -123,7 +123,7 @@ gnew () {
     mkdir -p "$1" && cd "$1"        ;
     touch readme.txt                ;
     # mkdir -p .vscode && cd .vscode  ;
-    cp -r ~/GoogleDrive/Programs/VS_Templates/"$2" ./.vscode ;
+    cp -r ~/GoogleDrive/Programs/VS_Templates/"$2" .vscode ;
     # -new git repo, adds and commits all files to repo-
     git init                        ;
     git add .                       ;
