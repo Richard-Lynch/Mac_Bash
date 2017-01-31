@@ -28,6 +28,7 @@ export PS1="${bold}\u @ \w ${reset}" # super small
 alias b="(cd && code .bash_profile)"					# opens bash profile
 alias p="cd /Users/Richard/GoogleDrive/Programs"		# navigates to programs folder
 alias ht="sudo htop"                                    # opens a better top
+alias cloud="ssh -R 2210:localhost:22 richie@199.19.226.161"
 # curl -u USERNAME -O https://WEBADDRESS/FILELOCATION/FILENAME.c
 # ps -A lists all processes
 
