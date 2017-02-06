@@ -51,6 +51,32 @@ alias h="history"  #lists history of commands
 # tmux ( installed with brew ) -> allows for multiple bash sessions in one screen with multiple threads, and allows ssh'ing between machiens with shared stuff
 # tmux attach -t SESSION_NAME
 
+# ---build and compile from source---
+# sudo apt-get install build-essential
+# get the source file (.tar.gz or .tar.bz2)
+# tar -xzvf file.tar.gz OR tar -xjvf file.tar.bz2
+# cd filedir
+# ./configure ( or install/readme )
+# install dependecies
+# (note, if there is an old version of the package in you repos, sudo apt-get build-dep packagename will download all of the dependencies )
+# make ( builds the program for your system )
+# sudo make install ( installs the program )
+# dont delete this directory because - 
+# sudo make uninstall
+# will uninstall the file
+
+# ---google searches---
+# filetype:pdf ireland -start ( returns pdfs containing ireland, but does not have the word startup )
+
+# ---mac updater---
+# mas list          //list app updates
+# mas outdated      //lists outdated apps
+# mas upgrade       //updates all apps
+# mas search  appName      //lists all search results
+# mas install applicationNumber //install applicationNumber
+# softwareupdate -l     //lists available updates for OS
+# sudo softwareupdate -ia --verbose     //updates current OS software
+
 lcd () {
     cd "$1"         ;
     ls              ;
@@ -84,7 +110,6 @@ alias sbu="source ~/.bash_profile"
 # alias ns="code /Users/Richard/GoogleDrive/Documents/College/Eng_2016-2017/shell/script.sh"
 # alias S="cd /Users/Richard/GoogleDrive/Documents/College/Eng_2016-2017/shell"
 # alias s="/Users/Richard/GoogleDrive/Documents/College/Eng_2016-2017/shell/script.sh"
-
 
 #---------------------PREFERED COMMANDS---------------------
 alias ls="ls -FG"  #lists file with color and annotation
