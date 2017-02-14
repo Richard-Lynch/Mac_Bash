@@ -93,8 +93,8 @@ alias .6="cd ../../../../../../"
 # Refresh Bash profile, commit and push to github and backup
 sb () {                                                         # refresh and backup bash_profile
     (cd                                             ;           # open parenthesis creates subshell to execute from home dir                                                     
-    git commit -q -am "$1"	                        ;           # commits all to git - requires message
-    git push  -q origin master	                    ;           # pushes all to remote
+    git commit -qv -am "$1"	                        ;           # commits all to git - requires message
+    git push  -qv origin master	                    ;           # pushes all to remote
     cp -iv ~/.bash_profile ~/.bback/bash_profile.backup.$(date +%Y-%m-%d_%H:%M:%S)   ;   # backup bash profile
     )   #outside of the subshell
     source ~/.bash_profile                          ;           # refresh bash_profile
