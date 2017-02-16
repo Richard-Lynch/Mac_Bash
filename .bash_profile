@@ -120,6 +120,10 @@ alias lsal="ls -FGlAhp" #lists as above + permissions
 alias cp="cp -irv" 	#copys but warns if there will be an override
 alias mv="mv -irv"	#moves but warns if there will be an override
 alias mkdir="mkdir -p"     #creates intermediate dirs if required and is verbose
+mcdir () {                  #creates a dir and hops into it
+    mkdir -p "$1"       ;
+    cd "$1"             ;
+}
 alias cl="clear && cd"   #clear and return home
 
 #---------------------GIT---------------------
