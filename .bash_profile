@@ -125,7 +125,10 @@ alias cl="clear && cd"   #clear and return home
 #---------------------GIT---------------------
 # git merge Feature-A   //merges Feature-A branch with master branch
 # this will not require any commits, but will require a push to the remote
-# 
+# git branch -d con   //will delete the con branch
+# git brnach -l         //will list the local branches
+# git push --set-upstream origin test       //create upstream branch of test on remote
+
 
 
 alias gcommit="git commit -am"		# commits all to git
@@ -146,6 +149,10 @@ gcp () {                                # copies a folder to a new folder, and c
     git push -u origin master       ;              
     git commit -am "Copied $2 from $1"  ;
     git push origin master          ;
+}
+
+gbl () {
+    git branch -l                     ;
 }
 
 gadd () {
