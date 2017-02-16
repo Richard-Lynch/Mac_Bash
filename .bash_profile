@@ -123,6 +123,11 @@ alias mkdir="mkdir -p"     #creates intermediate dirs if required and is verbose
 alias cl="clear && cd"   #clear and return home
 
 #---------------------GIT---------------------
+# git merge Feature-A   //merges Feature-A branch with master branch
+# this will not require any commits, but will require a push to the remote
+# 
+
+
 alias gcommit="git commit -am"		# commits all to git
 alias gpush="git push origin"	# pushes all to remote
 
