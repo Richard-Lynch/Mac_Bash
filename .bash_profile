@@ -140,8 +140,8 @@ gcp () {                                # copies a folder to a new folder, and c
     sudo rm -rv .git                 ;
     # -new git repo, adds and commits all files to repo-
     git init                        ;
-    git add .                       ;
-    git commit -am "First commit from copy of $1 to $2"   ;
+    # git add .                       ;
+    # git commit -am "First commit from copy of $1 to $2"   ;
     # -remote github repos, adds remote origin, verifys, pushs-
     curl -u 'Richard-Lynch' https://api.github.com/user/repos -d "{\"name\":\"$2\"}"   ;
     git remote add origin https://github.com/Richard-Lynch/$2.git                      ;
@@ -151,15 +151,15 @@ gcp () {                                # copies a folder to a new folder, and c
     git push origin master          ;
 }
 
-gbl () {
+gbl () {                      #lists the branches
     git branch -l                     ;
 }
 
-gch () {
+gch () {            #checks out the branch
     git checkout "$1"               ;
 }
 
-gadd () {
+gadd () {               #creates a file in a git repo, adds it to the repo, commits to local and pushes to remote
     create "$1"                       ;
     git add "$1"                      ;
     git commit -am "Created $1"     ;
