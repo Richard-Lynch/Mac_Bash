@@ -125,6 +125,7 @@ mcdir () {                  #creates a dir and hops into it
     cd "$1"             ;
 }
 alias cl="clear && cd"   #clear and return home
+alias clp="clear && p"   #clear and returns to program
 
 #---------------------GIT---------------------
 # git merge Feature-A   //merges Feature-A branch with master branch
