@@ -131,7 +131,7 @@ alias cl="clear && cd"   #clear and return home
 
 
 
-alias gcommit="git commit -am"		# commits all to git
+alias gcom="git commit -am"		# commits all to git
 alias gpush="git push origin"	# pushes all to remote
 
 gcp () {                                # copies a folder to a new folder, and creates a new git/github repo for it, and pushes everything
@@ -141,7 +141,6 @@ gcp () {                                # copies a folder to a new folder, and c
     # -new git repo, adds and commits all files to repo-
     git init                        ;
     git add .                       ;
-    # git commit -am "First commit from copy of $1 to $2"   ;
     # -remote github repos, adds remote origin, verifys, pushs-
     curl -u 'Richard-Lynch' https://api.github.com/user/repos -d "{\"name\":\"$2\"}"   ;
     git remote add origin https://github.com/Richard-Lynch/$2.git                      ;
