@@ -155,6 +155,10 @@ gbl () {
     git branch -l                     ;
 }
 
+gch () {
+    git checkout "$1"               ;
+}
+
 gadd () {
     create "$1"                       ;
     git add "$1"                      ;
