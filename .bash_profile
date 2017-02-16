@@ -140,7 +140,7 @@ gcp () {                                # copies a folder to a new folder, and c
     sudo rm -rv .git                 ;
     # -new git repo, adds and commits all files to repo-
     git init                        ;
-    # git add .                       ;
+    git add .                       ;
     # git commit -am "First commit from copy of $1 to $2"   ;
     # -remote github repos, adds remote origin, verifys, pushs-
     curl -u 'Richard-Lynch' https://api.github.com/user/repos -d "{\"name\":\"$2\"}"   ;
